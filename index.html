@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Maksymovych Desktop</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="top-bar">
+      <ul class="topbar-list">
+        <li></li>
+        <li><3 Code</li>
+        <li>I am</li>
+        <li>really</li>
+        <li>happy</li>
+        <li>to</li>
+        <li>see</li>
+        <li>you</li>
+        <li>there</li>
+        <li class="time-bar" id="current_date_time_block">
+          <script type="text/javascript">
+            /* (если число меньше десяти, перед числом добавляем ноль) */
+            function zero_first_format(value) {
+              if (value < 10) {
+                value = "0" + value;
+              }
+              return value;
+            }
+
+            /* функция получения текущей даты и времени */
+            function date_time() {
+              let current_datetime = new Date();
+              let day = zero_first_format(current_datetime.getDate());
+              let month = zero_first_format(current_datetime.getMonth() + 1);
+              let year = current_datetime.getFullYear();
+              let hours = zero_first_format(current_datetime.getHours());
+              let minutes = zero_first_format(current_datetime.getMinutes());
+              let seconds = zero_first_format(current_datetime.getSeconds());
+
+              return (
+                day +
+                "." +
+                month +
+                "." +
+                year +
+                " " +
+                hours +
+                ":" +
+                minutes +
+                ":" +
+                seconds
+              );
+            }
+
+            /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
+            document.getElementById("current_date_time_block").innerHTML =
+              date_time();
+          </script>
+        </li>
+      </ul>
+    </div>
+    <div class="project-folder">
+      <a href="#" class="project-folder">
+        <img src="/dist/pngegg.png" alt="" width="50" class="projects" />
+        <p>My Projects</p></a
+      >
+    </div>
+    <div class="project-folder readme-folder">
+      <a href="#projects" class="project-folder" id="readMe">
+        <img src="/dist/txt.png" alt="" width="50" class="projects" />
+        <p>ReadME.MD</p></a
+      >
+    </div>
+    <div class="project-folder">
+      <a
+        href="https://github.com/maksmvc"
+        target="_blank"
+        class="project-folder"
+      >
+        <img src="/dist/bin.png" alt="" width="50" class="projects" />
+        <p>RecycleBin</p></a
+      >
+    </div>
+
+    <div class="wallpaper"></div>
+    <div class="module hidden" id="project">
+      <div class="controls">
+        <span class="btn btn-close" id="close-project">Close</span>
+        <span class="btn btn-mini">Mini</span>
+        <span class="btn btn-expand">Expand</span>
+      </div>
+      <!-- <div class="content"></div> -->
+      <div class="edit-content" readonly>
+        <ul class="project-list">
+          <li>
+            <a
+              href="https://maksmvc.github.io/goit-markup-hw-07"
+              target="_blank"
+              class="project-link-item"
+            >
+              <img src="./vs.png" alt="" width="70" class="logo-project-item" />
+              <p>WebStudio</p></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://dezertirr.github.io/project-Outline/"
+              class="project-link-item"
+              target="_blank"
+            >
+              <img src="./vs.png" alt="" width="70" class="logo-project-item" />
+              <p>Choko site</p></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/"
+              target="_blank"
+              class="project-link-item"
+            >
+              <img src="./vs.png" alt="" width="70" class="logo-project-item" />
+              <p>MY LOVE site</p></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- README -->
+    <div class="wallpaper"></div>
+    <div class="module readme hidden" id="readme">
+      <div class="controls">
+        <span class="btn btn-close" id="close-readme">Close</span>
+        <span class="btn btn-mini">Mini</span>
+        <span class="btn btn-expand">Expand</span>
+      </div>
+      <!-- <div class="content"></div> -->
+      <div class="edit-content readme" readonly>
+        <h2 class="readme-title">
+          Hello, my name is Ivan Maksymovych, im started for learning IT.
+        </h2>
+        <p class="readme-text">Im have skills in this technologies:</p>
+        <ul class="readme-list">
+          <li>
+            <p class="readme-text">
+              HTML, im already making some sites in this technology, and can say
+              about my high skill in this:D
+            </p>
+          </li>
+          <li>
+            <p class="readme-text">
+              CSS, if you know its popular tech for adding styles for the web
+              sites, and im really good in this
+            </p>
+          </li>
+          <li>
+            <p class="readme-text">
+              JavaScript, i will be honest, in this technology i have low skill,
+              but im working for make me better
+            </p>
+          </li>
+          <li><p class="readme-text">Node.JS</p></li>
+          <li><p class="readme-text">React</p></li>
+        </ul>
+      </div>
+    </div>
+    <!-- README END -->
+
+    <div id="kapsa" class="myDiv">
+      <div id="ust">
+        <h4 id="title-window">ABOUT MY CODE</h4>
+        <div id="wrapper">
+          <a href="#" id="myLink" class="close-button"><div id="k"></div></a>
+          <div id="y"></div>
+          <div id="s"></div>
+        </div>
+      </div>
+
+      <div id="column">
+        <div id="no">
+          <span class="numbers">1</span>
+          <span class="numbers">2</span>
+          <span class="numbers">3</span>
+          <span class="numbers">4</span>
+          <span class="numbers">5</span>
+          <span class="numbers">6</span>
+          <span class="numbers">7</span>
+          <span class="numbers">8</span>
+          <span class="numbers">9</span>
+          <span class="numbers">10</span>
+          <span class="numbers">11</span>
+          <span class="numbers">12</span>
+          <span class="numbers">13</span>
+          <span class="numbers">14</span>
+          <span class="numbers">15</span>
+          <span class="numbers">16</span>
+          <span class="numbers">17</span>
+          <span class="numbers">18</span>
+          <span class="numbers">19</span>
+          <span class="numbers">20</span>
+          <span class="numbers">21</span>
+          <span class="numbers">22</span>
+          <span class="numbers">23</span>
+          <span class="numbers">24</span>
+          <span class="numbers">25</span>
+          <span class="numbers">26</span>
+          <span class="numbers">27</span>
+          <span class="numbers">28</span>
+          <span class="numbers">29</span>
+          <span class="numbers">30</span>
+          <span class="numbers">31</span>
+          <span class="numbers">32</span>
+          <span class="numbers">33</span>
+        </div>
+
+        <div id="satir">
+          <span class="windows-span-title"
+            >/*<br />&nbsp;&nbsp;&nbsp; IT'S ABOUT ME ->
+            <a href="https://github.com/maksmvc" target="_blank"
+              >Ivan Maksymovych</a
+            >
+            <br />*/</span
+          >
+          <br />
+          <span class="cl">.about</span>
+          <br />
+          <span class="spanwrap">{</span>
+          <br />
+
+          <span class="console-text">&nbsp;&nbsp;&nbsp;name</span>
+          <span class="spanwrap">:</span>
+          <span class="spancounter">&nbsp;Ivan</span
+          ><span class="spanwrap">;</span>
+          <br />
+
+          <span class="console-text">&nbsp;&nbsp;&nbsp;lastname</span>
+          <span class="spanwrap">:</span>
+          <span class="spancounter">&nbsp;Maksymovych</span
+          ><span class="spanwrap">;</span>
+          <br />
+
+          <span class="console-text">&nbsp;&nbsp;&nbsp;age</span>
+          <span class="spanwrap">:</span>
+          <span class="spancounter">&nbsp;26</span
+          ><span class="spanwrap">;</span>
+          <br />
+
+          <span class="console-text">&nbsp;&nbsp;&nbsp;country</span>
+          <span class="spanwrap">:</span>
+          <span class="spancounter"
+            >&nbsp;Ukraine <span class="onemli">!important</span></span
+          ><span class="spanwrap">;</span>
+          <br />
+          <span class="spanwrap">}</span>
+          <br />
+          <br />
+
+          <span class="cl">.soft-skills</span>
+          <br />
+          <span class="spanwrap">{</span>
+          <br />
+
+          <span class="console-text">&nbsp;&nbsp;&nbsp;Agile</span>
+          <span class="spanwrap">:</span>
+          <span class="spancounter">&nbsp;10/10</span
+          ><span class="spanwrap">;</span>
+          <span class="windows-span-title" style="display: inline-block"></span>
+          <br />
+
+          <span class="console-text">&nbsp;&nbsp;&nbsp;SCRUM</span>
+          <span class="spanwrap">:</span>
+          <span class="spancounter">&nbsp;10/10</span
+          ><span class="spanwrap">;</span>
+          <br />
+
+          <span class="console-text">&nbsp;&nbsp;&nbsp;friendly</span>
+          <span class="spanwrap">:</span>
+          <span class="spancounter"
+            >&nbsp;<font color="#D6FF00">"10/10"</font></span
+          ><span class="spanwrap">;</span>
+          <br />
+
+          <span class="spanwrap">}</span>
+          <br />
+          <br />
+
+          <span class="cl">.techskills</span>
+          <br />
+          <span class="spanwrap">{</span>
+          <br />
+
+          <span class="console-text">&nbsp;&nbsp;&nbsp;html</span>
+          <span class="spanwrap">:</span>
+          <span class="spancounter">&nbsp;100%</span
+          ><span class="spanwrap">;</span>
+          <br />
+
+          <span class="console-text">&nbsp;&nbsp;&nbsp;css</span>
+          <span class="spanwrap">:</span>
+          <span class="spancounter">&nbsp;100%</span
+          ><span class="spanwrap">;</span>
+          <br />
+
+          <span class="console-text">&nbsp;&nbsp;&nbsp;responsive</span>
+          <span class="spanwrap">:</span>
+          <span class="spancounter">&nbsp;98%</span
+          ><span class="spanwrap">;</span>
+          <br />
+
+          <span class="console-text">&nbsp;&nbsp;&nbsp;JS</span>
+          <span class="spanwrap">:</span>
+          <span class="spancounter">&nbsp;70%</span
+          ><span class="spanwrap">;</span>
+          <br />
+
+          <span class="console-text">&nbsp;&nbsp;&nbsp;Node.js</span>
+          <span class="spanwrap">:</span>
+          <span class="spancounter">&nbsp;98%</span
+          ><span class="spanwrap">;</span>
+          <br />
+
+          <span class="console-text">&nbsp;&nbsp;&nbsp;React</span>
+          <span class="spanwrap">:</span>
+          <span class="spancounter">&nbsp;43%</span
+          ><span class="spanwrap">;</span>
+          <br />
+
+          <span class="spanwrap">}</span>
+          <br />
+          <br />
+
+          <span class="id">#my-slogan</span>
+          <br />
+          <span class="spanwrap">{</span>
+          <br />
+
+          <span class="console-text">&nbsp;&nbsp;&nbsp;content</span>
+          <span class="spanwrap">:</span>
+          <span class="spancounter"
+            >&nbsp;<font color="#D6FF00"
+              >"Bez truda ne vilovish fish from pruda"</font
+            ></span
+          ><span class="spanwrap">;</span>
+          <br />
+
+          <span class="spanwrap">}</span>
+          <br />
+        </div>
+
+        <div class="temizle"></div>
+      </div>
+
+      <div id="alt">&copy;</div>
+    </div>
+    <!-- partial -->
+
+    <script src="./script.js"></script>
+    <script src="./main.js"></script>
+    <footer>
+      <div class="bar-wrapper">
+        <div class="low-bar">
+          <ul class="bar-list">
+            <li class="bar-item">
+              <a href="/" class="bar-link"
+                ><img src="./finder.png" alt="" width="70"
+              /></a>
+            </li>
+            <li class="bar-item">
+              <a href="mailto:maksymovychmail@gmail.com"
+                ><img src="./email.png" alt="" width="70"
+              /></a>
+            </li>
+            <li class="bar-item git">
+              <a href="https://github.com/maksmvc" target="_blank"
+                ><img src="./github.png" alt="" width="65"
+              /></a>
+            </li>
+            <li class="bar-item">
+              <a href="/"><img src="./vs.png" alt="" width="70" /></a>
+            </li>
+            <li class="bar-item">
+              <a href="tel:+380668251488"
+                ><img src="./phone.png" alt="" width="70"
+              /></a>
+            </li>
+            <li class="bar-item">
+              <a href="https://t.me/mks1mv" target="_blank"
+                ><img src="./telegram.png" alt="" width="70"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
